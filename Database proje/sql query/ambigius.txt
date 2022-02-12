@@ -1,0 +1,6 @@
+create table favorite_of_user
+(favorite_name varchar(50) not null, fuser_id int not null,
+ fprofile_id int not null, name varchar(60) not null, created_at timestamp,
+ primary key(favorite_name, fuser_id ,fprofile_id),
+ foreign key(favorite_name) references favorite(favorite_name),
+ foreign key(fuser_id,fprofile_id) references face_profile(fuser_id,fprofile_id))
